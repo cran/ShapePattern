@@ -1,0 +1,6 @@
+exportPattern("^[[:alpha:]]+")
+importFrom(rgdal, readOGR, writeOGR)
+importFrom(rgeos, gArea, gLength, gIsEmpty, gBuffer)
+importFrom(graphics, par, title)
+importFrom(utils, data, write.table)
+import(sp)
