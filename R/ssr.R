@@ -3,10 +3,9 @@ function(DIST=25, shp=data$p4no, colours=c("LightGreen","Tan"), PLOT=TRUE) {
 
   #==================================================
   #
-  #  FILENAME:   ShrinkShape.r
   #  NAME:       ssr()
   #  AUTHOR:     Tarmo K. Remmel
-  #  DATE:       19 January 2016
+  #  DATE:       25 October 2016
   #  NOTES:      Perform ShrinkShape fully in R
   #  NEEDS:      A shapefile (polygons), properly built
   #              libraries: sp, rgeos, rgdal
@@ -46,9 +45,9 @@ function(DIST=25, shp=data$p4no, colours=c("LightGreen","Tan"), PLOT=TRUE) {
     for (a in 1:noiter) {
       plot(gBuffer(shp, width=(-1*a*DIST)), xlim=shp@bbox[1,], ylim=shp@bbox[2,], xlab="X-Coordinate", ylab="Y-Coordinate", col=fill[a+1])
       par(new=TRUE)
-    }
+    } # END FOR
     title("Shrinking Phases")
-  }
+  } # END IF
     
   # NOW BUILD VECTORS FOR ACCUMULATING AREA, PERIMETER, AND PARTS
   area <- rep(0,noiter)
@@ -69,8 +68,8 @@ function(DIST=25, shp=data$p4no, colours=c("LightGreen","Tan"), PLOT=TRUE) {
       area[a] <- gArea(temp)
       perim[a] <- gLength(temp)
       parts[a] <- length(temp@polygons[[1]]@Polygons)
-    }
-  }
+    } # END IF
+  } # END FOR
 
   # BIND CUMULATIVE SHRINKING DISTANCE, AREA, PERIMETER, AND PARTS INTO MATRIX
   # NEED TO ADJUST THE NEXT LINE TO PROPERLY ADJUST THE CUMULATIVE SHRINKING DISTANCE
@@ -96,9 +95,9 @@ function(DIST=25, shp=data$p4no, colours=c("LightGreen","Tan"), PLOT=TRUE) {
     par(new=FALSE)
     plot(tab$NumParts, type="o", xlab="Shrinking Phase", ylab="Number of Parts")
     title("Parts")
-  }
+  } # END IF
 
   # SEND RESULTS TABLE BACK AS FUNCTION RETURN
   return(tab)
 
-}
+} # END FUNCTION: ssr

@@ -1,9 +1,9 @@
-11d7e2bad8e252104d3f5ad5a3b01211 *DESCRIPTION
+8378b19e17f44c05f14235449fe726f5 *DESCRIPTION
 1ddb337f017f19b67820350e6d1a2b5c *NAMESPACE
-1ca27dff4217e4ea63059cac1a269d6e *R/batchssr.R
-e45064061ea3594a7155f12b88a6828e *R/shpsplitter.R
-e58f2f2778ba920d06f26bea41ec0df1 *R/ssr.R
-0c0896b50a226d04959ad032b9aec007 *build/partial.rdb
+ca0e05c321b567f79775ec6c5bbd5d4a *R/batchssr.R
+bc0f3260978f5d77b9d273f0b119fc69 *R/shpsplitter.R
+65ae0e35117eb0f34bb65cc2178847dc *R/ssr.R
+3943a31defa133c3c37d49328a25e16b *build/partial.rdb
 26aff7df1e0fd6e50fd5803bb572690f *data/data.rda
 ab51832264066cfa364d3d933b922032 *man/ShapePattern-package.Rd
 b7b316dace9755713a76a00b8ee42f26 *man/batchssr.Rd

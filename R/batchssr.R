@@ -3,19 +3,15 @@ function(outfile="out.csv", START=1) {
   
   #==================================================
   # 
-  #  FILENAME:   ShrinkShape.r
   #  NAME:       batchssr()
   #  AUTHOR:     Tarmo K. Remmel
-  #  DATE:       1 March 2016
+  #  DATE:       25 October 2016
   #  NOTES:      Calls ssr() -- Shrinkshape (for R) -- on each shapefile output by shpsplitter()
   #  NEEDS:      Shapefiles, each with one polygon, properly built
+  #              Libraries: sp, rgdal, rgeos
   #  NOTES:      Projection units must be m, not dd or other angular unit
   #    
   #==================================================
-
-  #library(sp)
-  #library(rgdal)
-  #library(rgeos)
 
   files <- list.files(path="./", pattern=".shp")
   cat("Preparing to process ", length(files), " files...\n", sep="")
@@ -52,5 +48,4 @@ function(outfile="out.csv", START=1) {
     write.table(temptab, file=outfile, append=TRUE, sep=",", col.names=FALSE, row.names=FALSE)
   } # END FOR: i
 
-
-}
+} # END FUNCTION: batchssr
