@@ -1,4 +1,4 @@
-patternbits <- function(IMGCSV="~/Desktop/Book2.csv", OBJ=FALSE, OBJname=matrix(c(1,1,0,0,0,1,1,1,0), nrow=3, ncol=3), OBJtxt="NAMEhere", DRAW=TRUE, VERBOSE=FALSE, TORUS=TRUE, rho=0, proportion=0.5) {
+patternbits <- function(IMGCSV="~/Desktop/Book2.csv", OBJ=TRUE, OBJname=matrix(c(1,1,0,0,0,1,1,1,0), nrow=3, ncol=3), OBJtxt="NAMEhere", DRAW=TRUE, VERBOSE=FALSE, TORUS=TRUE, rho=0, proportion=0.5) {
 
   #-----------------------------------------------------
   # 

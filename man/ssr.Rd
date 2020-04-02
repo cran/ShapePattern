@@ -48,7 +48,7 @@ See Also \code{\link{readOGR}}
 }
 
 \examples{
-data$out <- ssr(DIST=25, shp=data$p4is, PLOT=TRUE, colours=c("LightGreen", "Tan"))
+data$out <- ssr(DIST=25, shp=data$p4no, PLOT=TRUE, colours=c("LightGreen", "Tan"))
 print(data$out)
 }
 

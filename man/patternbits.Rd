@@ -10,7 +10,8 @@ Given an input binary (0,1) pattern as a .csv file or matrix object, this functi
 
 \usage{
 patternbits(IMGCSV="~/Desktop/Book2.csv", 
-            OBJ=FALSE, OBJname=matrix(c(1,1,0,0,0,1,1,1,0), nrow=3, ncol=3), 
+            OBJ=TRUE,
+            OBJname=matrix(c(1,1,0,0,0,1,1,1,0), nrow=3, ncol=3), 
             OBJtxt="NAMEhere",  
             DRAW=TRUE, 
             VERBOSE=FALSE, 
