@@ -5,7 +5,7 @@ Decompose a binary landscape (grid) to count its pattern elements
 }
 
 \description{
-Given an input binary (0,1) pattern as a .csv file or matrix object, this function shifts that pattern in each of the 4 cardinal directions by one location (cell) and then counts the frequency for each of the 32 hyper-local neighbourhood configurations (\code{CODE}). The frequencies are provided for each \code{CODE} along with their \code{PROBABILITY}. Finally an object that maps the \code{CODE} into a matrix that can be drawn as a map is also provided as part of the ouput list object.
+Given an input binary (0,1) pattern as a .csv file or matrix object, this function shifts that pattern in each of the 4 cardinal directions by one location (cell) and then counts the frequency for each of the 32 hyper-local neighbourhood configurations (\code{CODE}). The frequencies are provided for each \code{CODE} along with their \code{PROBABILITY}. Finally an object that maps the \code{CODE} into a matrix that can be drawn as a map is also provided as part of the ouput list object. Note that the minimum number of grid rows or columns are 3 each if processing a non-toroidal surface. The minimum grid size can be [2,2], but in reality, to ensure sufficient opportunities for cases to present themselves, the total number of cells should be much greater than 32. Grids do not have to have an equal number of rows and columns and the option to select a toroidal versus non-toroidal surface are now operational too.
 }
 
 \usage{
@@ -38,7 +38,7 @@ This is a Boolean flag that is used to turn the drawing function on (TRUE) or of
 This is a Boolean flag that is used to control the display of additional state feeback during operation (TRUE), or to suppress it (FALSE). Generally, this is used in the default FALSE mode, but since it was useful during development, it has been left in for now).
 }
   \item{TORUS}{
-This is a Boolean flag that determines whether the data is considered to be toroidal (continuous) by having the edges wrap around to the opposite side (TRUE), or not (FALSE). Currently both modes behave as if it is TRUE. The enhancement for FALSE is coming soon.
+This is a Boolean flag that determines whether the data is considered to be toroidal (continuous) by having the edges wrap around to the opposite side (TRUE), or not (FALSE). If FALSE, the outer edge of result cells are omitted and the output is 2 rows and 2 columns smaller than the input. This means that an imput must have at least 3 rows and 3 columns for a non-toroidal case to not provide an error message.
 }
   \item{rho}{
 A numeric element that serves the purpose of passing this pattern parameter to the function, allowng it to be added to the output list object as reference. It is not actually used to control processing. This value describes the degree of spatial autocorrelation in the input object.

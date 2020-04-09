@@ -25,20 +25,33 @@ Maintainer: \packageMaintainer{ShapePattern}
 }
 
 \references{
+Comparing binary landscapes:
+
 Remmel, T.K. and M.-J. Fortin. 2016. What constitutes a significant difference in landscape pattern? (using R). In Gergel, S.E. and M.G. Turner. Learning landscape ecology: concepts and techniques for a sustainable world (2nd ed.). New York: Springer. http://sarahgergel.net/lel/learning-landscape-ecology/
 
 Remmel, T.K. and M.-J. Fortin. 2013. Categorical class map patterns: characterization and comparison. Landscape Ecology. DOI: 10.1007/s/10980-013-9905-x.
 
+
+Polygon shape analysis:
+
 Remmel, T.K. 2015. ShrinkShape2: a FOSS toolbox for computing rotation-invariant shape spectra for characterizing and comparing polygons. The Canadian Geographer 59(4):532-547.
 
+
+Simulating Landscapes:
+
 Remmel, T.K. and F. Csillag. When are two landscape pattern indices significantly different? Journal of Geographical Systems 5(4):331-351.
+
+
+For computing pattern elements:
+
+Remmel, T.K. 2020. Distributions of hyper-local configuration elements to characterize, compare, and assess landscape-level spatial patterns. Entropy 22(4):420.
 }
 
 \keyword{ package }
 \keyword{ manip }
 
 \seealso{
-It would be prudent to also observe the landscapemetrics package.
+It would be prudent to also observe the \code{landscapemetrics} package.
 }
 
 \examples{
