@@ -13,7 +13,7 @@ This is a generic data environment that provides some demo data and control func
 \usage{data("data")}
 
 \format{
-The lake outlines (\code{p4is} and \code{p4no}) are in imported shapefile format; they were imported using \code{rgdal:readOGR}. The demo images for class-level pattern comparison (\code{demoimage1} and \code{demoimage2}) are matrix objects. DIFF50 is a matrix of Whittle correction factors (which should not be modified unless the user is certain that this needs to be done). The current factors are designed for 64x64 cell landscape subsets; corrections for other sizes can be constructed with \code{build.lut}; this can take a very long time!
+The lake outlines (\code{p4is} and \code{p4no}) are in imported shapefile format; they were imported using \code{rgdal:readOGR}. The demo images for class-level pattern comparison (\code{demoimage1} and \code{demoimage2}) are matrix objects. DIFF50 is a matrix of Whittle correction factors (which should not be modified unless the user is certain that this needs to be done). The current factors are designed for 64x64 cell landscape subsets; corrections for other sizes can be constructed with \code{build.lut}; this can take a very long time! The raster 'rst' can be used for testing the \code{porosity} function.
 }
 
 \details{
@@ -35,6 +35,7 @@ plot(data$p4is)
 print(data$DIFF50)
 image(data$demoimage1)
 image(data$demoimage2)
+plot(data$rst)
 }
 
 \keyword{datasets}

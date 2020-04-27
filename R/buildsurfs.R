@@ -17,7 +17,7 @@ function(reps=1000, verbose=TRUE) {
   #--------------------------------------------------------------
 
   # SAVE GRAPHIC PARAMETERS AND RESTATE THEM ON EXIT
-  opar <- par(no.readonly =TRUE)
+  opar <- par(no.readonly=TRUE)
   on.exit(par(opar))
 
   # DEFINE BINARY PROPORTION INTERVALS (9 OF THEM)

@@ -1,11 +1,14 @@
 exportPattern("^[[:alpha:]]+")
-export(singlemap, singleplotter, doubleplotter, imaks, build.lut, buildsurfs, surfplot, CARsimu, ssr, shpsplitter, batchssr, KLPQ, patternbits)
+export(singlemap, singleplotter, doubleplotter, imaks, build.lut, buildsurfs, surfplot, CARsimu, ssr, shpsplitter, batchssr, KLPQ, patternbits, porosity)
 importFrom(rgdal, readOGR, writeOGR)
 importFrom(rgeos, gArea, gLength, gIsEmpty, gBuffer)
 importFrom(graphics, par, title, axis, boxplot, image, persp, plot, plot.new, points, segments)
 importFrom(utils, data, write.table, install.packages, read.table)
-import(sp)
 importFrom("grDevices", "palette", "topo.colors", "trans3d")
 importFrom("stats", "fft", "median", "nlminb", "quantile", "rnorm")
 importFrom("landscapemetrics", "calculate_lsm")
-importFrom("raster", "raster")
+importFrom("raster", "raster", "res", "projection", "values", "extend", "shift", "freq", "clump", "zonal")
+import("sp")
+import("igraph")
+
+
