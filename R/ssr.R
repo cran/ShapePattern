@@ -27,11 +27,6 @@ function(DIST=25, shp=data$p4no, colours=c("LightGreen","Tan"), PLOT=TRUE) {
   # FULLY IMPLEMENTED IN R (NO SAGA REQUIRED) AND INCLUDES A PLOT OF THE SHRINKING
   # NOTE THAT PLOTTING GREATLY SLOWS THE ALGORITHM         
   #==================================================
-
-  # LOAD REQUIRED LIBRARIES
-  #library(rgeos)
-  #library(sp)
-  #library(rgdal)
   
   # ESTIMATE THE NUMBER OF ITERATIONS REQUIRED BASED ON SHAPEFILE BOUNDING BOX COORDINATES
   noiter <- ceiling(max(abs(shp@bbox[,1] - shp@bbox[,2])) / DIST) + 1

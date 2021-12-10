@@ -65,9 +65,7 @@ function(BE=data$demoimage1, CONTROL=FALSE, SIZE=6) {
   C1 <- unlist(CC)[2]
   KI <- nlminb(0.1, wiga, lower = 0, upper = 0.25)
   if(CONTROL) {
-      # REMOVING THIS LINE (WRITE TO FILE) WITH WRITE TO SCREEN
-      # write(c("rho , tau2 : ", round(KI$par, 4), round(CC$C0 - CC$C1 * KI$par, 4)))
-      cat("rho , tau2 : ", round(KI$par, 4), round(CC$C0 - CC$C1 * KI$par, 4))
+    cat("rho , tau2 : ", round(KI$par, 4), round(CC$C0 - CC$C1 * KI$par, 4))
   }
   GARB <- list(value = KI$par)
 

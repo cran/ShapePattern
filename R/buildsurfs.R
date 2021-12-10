@@ -52,8 +52,7 @@ function(reps=1000, verbose=TRUE) {
         results <- calculate_lsm(raster(realization), level="class")
               
         # WRITE METRICS TO APPROPRIATE ARRAY LOCATION
-        storage[,prop,rho,replicate] <- t(as.vector(results[,6]))
-
+        storage[,prop,rho,replicate] <- t(results[,"value"])
         dim(storage) <- c(110,9,11,reps)
         
       } # END FOR: REPLICATE

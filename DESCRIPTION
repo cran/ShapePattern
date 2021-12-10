@@ -1,7 +1,7 @@
 Type: Package
 Package: ShapePattern
 Title: Tools for Analyzing Shapes and Patterns
-Version: 2.1.0
+Version: 2.2.0
 Authors@R: c(
   person("Tarmo K.", "Remmel", email = "remmelt@yorku.ca", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-6251-876X")),
   person("Marie-Josee", "Fortin", role = "ctb"),
@@ -15,10 +15,10 @@ LazyDataCompression: xz
 Depends: R (>= 3.5.0), sp, igraph
 Imports: rgdal, landscapemetrics, rgeos, raster
 NeedsCompilation: no
-Packaged: 2020-04-27 15:25:52 UTC; Tarmo
+Packaged: 2021-12-10 02:31:52 UTC; tarmo
 Author: Tarmo K. Remmel [aut, cre] (<https://orcid.org/0000-0001-6251-876X>),
   Marie-Josee Fortin [ctb],
   Ferenc Csillag [ctb],
   Sandor Kabos [ctb]
 Repository: CRAN
-Date/Publication: 2020-04-27 16:00:02 UTC
+Date/Publication: 2021-12-10 06:00:02 UTC

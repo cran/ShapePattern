@@ -6,7 +6,7 @@ Whittle estimation for binary map
 \description{
 This function is the workhorse for estimating the Whittle correction for a binary map. This function is generally called by a wrapping function to facilitate its use (e.g., \code{singlemap}).}
 \usage{
-wtest.run(LEVEL=6, REPSIM=20, RHO=0.2499999, CPROP=0.5, RAJZ=T, CIM="CIM", ENV="data")
+wtest.run(LEVEL=6, REPSIM=20, RHO=0.2499999, CPROP=0.5, RAJZ=TRUE, CIM="CIM", ENV="data")
 }
 \arguments{
   \item{LEVEL}{

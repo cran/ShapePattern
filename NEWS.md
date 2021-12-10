@@ -1,3 +1,12 @@
+# ShapePattern 2.2.0
+* Improvements
+    * Removal of as.vector() calls to data.frames as per new CRAN requirements.
+* Bugfixes
+    * Minor updates to manual pages and code.
+    * Removed some old commented code.
+    * Moved some console feedback to warning() calls.
+    * Fixed some index references that used integers to column names.
+
 # ShapePattern 2.1.0
 * Improvements
     * Inclusion of 'porosity()' function that provides the functionality of Remmel (2018), fully implemented in R and not relying on ArcGIS or Python.

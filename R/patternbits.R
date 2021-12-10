@@ -219,7 +219,7 @@ patternbits <- function(IMGCSV="~/Desktop/Book2.csv", OBJ=TRUE, OBJname=matrix(c
     return(results)
 
   } else {
-    cat("\nERROR 0: Input image dimensions too small.")
+    warning("\nERROR 0: Input image dimensions too small.")
   }
 
 } # END FUNCTION: patternbits

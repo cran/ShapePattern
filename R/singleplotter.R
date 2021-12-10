@@ -44,7 +44,7 @@ singleplotter <- function(dat=data$result1, img=data$demoimage1, metrics=c(1,5,1
 
   # COMPUTE ACTUAL CLASS METRICS
   actual <- calculate_lsm(landscape=raster(img), level="class")
-  actual2 <- as.data.frame(t(as.vector(actual[,6])))
+  actual2 <- as.data.frame(t(actual[,"value"]))
   actual <- actual2
   names(actual) <- names(dat)
 

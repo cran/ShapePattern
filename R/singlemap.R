@@ -80,12 +80,13 @@ singlemap <- function(IMG =data$demoimage1, CORRECTIONMAT=data$DIFF50, VERBOSE=T
 
     # COMPUTE AND STORE THE 55 CLASS METRICS USING PACKAGE: landscapemetrics
     results <- calculate_lsm(raster(realization), level="class")
-    tab[a,] <- t(as.vector(results[,6]))
+   
+    tab[a,] <- t(results[,"value"])
 
     # ADD COLUMN NAMES IF THIS IS THE FIRST ITERATION
     if(a==1) {
       # ADD NAMES TO THE DATAFRAME TO DIFFERENTIATE THE COLUMNS
-      names(tab) <- paste(rep(c("LOW.", "HIGH."),55), t(as.vector(results[,5])))	
+      names(tab) <- paste(rep(c("LOW.", "HIGH."),55), t(results[,"metric"]))
     }
 
   } # END FOR: a

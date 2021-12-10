@@ -1,5 +1,5 @@
 wtest.run <-
-function(LEVEL=6, REPSIM=20, RHO=0.2499999, CPROP=0.5, RAJZ=T, CIM="CIM", ENV="data") {
+function(LEVEL=6, REPSIM=20, RHO=0.2499999, CPROP=0.5, RAJZ=TRUE, CIM="CIM", ENV="data") {
 
   #--------------------------------------------------------------
   # 
@@ -40,12 +40,14 @@ function(LEVEL=6, REPSIM=20, RHO=0.2499999, CPROP=0.5, RAJZ=T, CIM="CIM", ENV="d
   dim(RESULT) <- c(2, REPSIM)
 
   # SETUP ARRAYS FOR THE WHITTLE ESTIMATION
-  #setuparray <- wibi(LEVEL)
-  #assign("WIBI", wibi(LEVEL)[[1]], envir=get(ENV))
-  #assign("WITRUNC", wibi(LEVEL)[[2]], envir=get(ENV))
+  # THIS WAS THE LEGACY APPROACH BY FERKO AND KABOS; KEPT HERE FOR
+  # HISTORICAL REFERENCE
+  # setuparray <- wibi(LEVEL)
+  # assign("WIBI", wibi(LEVEL)[[1]], envir=get(ENV))
+  # assign("WITRUNC", wibi(LEVEL)[[2]], envir=get(ENV))
 
   for(lup in 1:REPSIM) {
-    W <- CARsimu(rho = RHO, rajz = F)
+    W <- CARsimu(rho = RHO, rajz = FALSE)
     RESULT[1, lup] <- wi(BE = W, CONTROL = RAJZ, SIZE=LEVEL)
     TEMP <- quantile(W, CPROP)
     GARB <- W > TEMP[1]
@@ -61,7 +63,7 @@ function(LEVEL=6, REPSIM=20, RHO=0.2499999, CPROP=0.5, RAJZ=T, CIM="CIM", ENV="d
       cat("\r... PRESS ENTER TO CONTINUE (1 TO LET IT RUN)...")
       ans <- readline()
       if(ans == 1)
-      RAJZ <- F
+      RAJZ <- FALSE
     } # END IF
     RESULT[2, lup] <- wi(BE = W.0, CONTROL = RAJZ, SIZE=LEVEL)
     cat("\r                          ", lup, "ITERATION OUT OF:", REPSIM)

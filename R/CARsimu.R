@@ -63,15 +63,8 @@ function(LEVEL=6, rho=0.2499, row2=0, col2=0, rc1=0, cr1=0, maindi=1, rajz=TRUE)
     nkar <- 3
   }
   A <- A/sum(A*A)
-  #cat("\r ---> CAR Simulation by FFT")
   if(rajz) {
       # INSERT POSSIBLE DRAWING FUNCTIONALITY HERE BUT BEST TO MOVE IT OUT OF THIS FUNCTION
   }
-  #par(mfrow = c(1, 1))
-  #image(A)
-  #cat("\n PRESS ENTER TO CONTINUE, ELSE TO STOP")
-  #ans <- readline()
-  #}
   return(A)
-	
-}
+} # END FUNCTION: CARsimu
