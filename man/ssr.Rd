@@ -9,7 +9,7 @@ Given a single- or multi-part polygon (imported from a shapefile), ssr decompose
 }
 
 \usage{
-ssr(DIST = 25, shp = data$p4no, colours = c("LightGreen", "Tan"), PLOT = TRUE)
+ssr(DIST = 25, shp = NULL, colours = c("LightGreen", "Tan"), PLOT = TRUE)
 }
 
 \arguments{
@@ -40,16 +40,27 @@ Tarmo K. Remmel
 }
 
 \note{
-The shapefile must already be imported (e.g. with readOGR) and have only one unique shape (although it may be multi-part and contain holes). The projection must be rectangular with units in meters (not decimal degrees or other angular unit)
+The shapefile must already be imported and have only one unique shape (although it may be multi-part and contain holes). The projection must be rectangular with units in meters (not decimal degrees or other angular unit)
 }
 
 \seealso{
-See Also \code{\link{readOGR}}
+None.
 }
 
 \examples{
-data$out <- ssr(DIST=25, shp=data$p4no, PLOT=TRUE, colours=c("LightGreen", "Tan"))
-print(data$out)
+# ALTERNATE DEMO DATASETS
+# shpfileobj <- terra::vect(data$p4no)
+# shpfileobj <- terra::vect(data$p4is)
+
+# PATH TO DEMO SHAPEFILE
+f <- system.file("ex/lux.shp", package="terra")
+# IMPORT SHAPEFILE TO SpatVect FORMAT WITH terra PACKAGE
+v <- terra::vect(f)
+# REPROJECT TO A VALID PROEJCTION
+shpfileobj <- terra::project(v, "EPSG:2150")
+# CALL ssr ON FIRST OF THE POLYGONS WITHIN THE SpatVect
+out <- ssr(DIST=500, shp=shpfileobj[1], colours=c("LightGreen", "Tan"), PLOT=TRUE)
+print(out)
 }
 
 \keyword{ manip }

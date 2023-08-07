@@ -1,9 +1,9 @@
 exportPattern("^[[:alpha:]]+")
-export(singlemap, singleplotter, doubleplotter, imaks, build.lut, buildsurfs, surfplot, CARsimu, ssr, shpsplitter, batchssr, KLPQ, patternbits, porosity)
-importFrom(rgdal, readOGR, writeOGR)
-importFrom(rgeos, gArea, gLength, gIsEmpty, gBuffer)
+export(singlemap, singleplotter, doubleplotter, imaks, build.lut, buildsurfs, surfplot, CARsimu, ssr, KLPQ, patternbits, porosity)
+ 
 importFrom(graphics, par, title, axis, boxplot, image, persp, plot, plot.new, points, segments)
-importFrom(utils, data, write.table, install.packages, read.table)
+importFrom(terra, ext, geom, buffer, expanse, perim, plot)
+importFrom(utils, data, write.table, read.table)
 importFrom("grDevices", "palette", "topo.colors", "trans3d")
 importFrom("stats", "fft", "median", "nlminb", "quantile", "rnorm")
 importFrom("landscapemetrics", "calculate_lsm")

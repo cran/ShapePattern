@@ -1,3 +1,14 @@
+# ShapePattern 3.0.0
+* Improvements
+    * Adaptations for retired rgeos and rgdal packages.
+    * Transfer reliance to package: terra.
+* Bugfixes
+    * Minor updates to manual pages and code.
+    * Removed some old commented code to clean scripts.
+* Retire
+    * Retired batchssr() that are not necessary given the simplicity with which ssr() can be called in a loop.
+    * Retired shpsplitter() as it was a niche tool used infrequently and it forces the data to be brought into ssr() clean, rather than rely on the tool to attempt to handle exceptions.
+
 # ShapePattern 2.2.0
 * Improvements
     * Removal of as.vector() calls to data.frames as per new CRAN requirements.

@@ -28,7 +28,7 @@ The name of the environment where temporary objects are stored. The default is d
 
 }
 \details{
-This does not need to be run if you have downloaded and installed the \code{PatternClass} package and are using it to analyze 64x64 pixel image subsets as proposed.  The \code{singlemap} function will call on the provided internal lookup table and thus save on substantial processing time.  The current implementation provides a lookup table with bias correction values based on the mean of 50 replicate simulations for each pair-wise combination of composition and configuration parameterization.  Thus, the 9 levels of composition, 11 levels of spatial autocorrelation, and 50 replicates, means that 9*11*50 = 4950 landscapes are simulated and used to produce the bias correction lookup table that is provided with the package.
+This does not need to be run if you have downloaded and installed the \code{PatternClass} package and are using it to analyze 64x64 pixel image subsets as proposed. The \code{singlemap} function will call on the provided internal lookup table and thus save on substantial processing time. The current implementation provides a lookup table with bias correction values based on the mean of 50 replicate simulations for each pair-wise combination of composition and configuration parameterization.  hus, the 9 levels of composition, 11 levels of spatial autocorrelation, and 50 replicates, means that 9*11*50 = 4950 landscapes are simulated and used to produce the bias correction lookup table that is provided with the package.
 }
 \value{
 The result is a lookuptable (LUT) that is a 9x11 matrix of values used by singlemap().

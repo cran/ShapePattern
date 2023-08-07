@@ -16,7 +16,7 @@ function(LEVEL=6, REPSIM=5, RAJZ=FALSE, CIM="", ENV="data") {
   #--------------------------------------------------------------
 
   # SAVE GRAPHIC PARAMETERS AND RESTATE THEM ON EXIT
-  opar <- par(no.readonly =TRUE)
+  opar <- par(no.readonly=TRUE)
   on.exit(par(opar))
 
   DIFF <- rep(0, 110)
@@ -31,7 +31,7 @@ function(LEVEL=6, REPSIM=5, RAJZ=FALSE, CIM="", ENV="data") {
       CPROP <- lupcprop
       IY <- IY + 1
       for(lup in 1:REPSIM) {
-        RESULTT <- wtest.run(REPSIM = REPSIM, LEVEL = LEVEL, RHO= RHO, CPROP = CPROP, RAJZ = RAJZ, CIM = CIM, ENV=ENV)
+        RESULTT <- wtest.run(REPSIM = REPSIM, LEVEL = LEVEL, RHO = RHO, CPROP = CPROP, RAJZ = RAJZ, CIM = CIM, ENV=ENV)
       } # END FOR: lup
       DIFF[IX, IY] <- median(RESULTT[1,  ]) - median(RESULTT[2,])
     } # END FOR: lupcprop

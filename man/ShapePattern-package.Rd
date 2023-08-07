@@ -66,7 +66,7 @@ It would be prudent to also observe the \code{landscapemetrics} package.
 # This package provides functions for different areas of analysis:
 #
 # 1. ShrinkShape
-# ssr(), batchssr()
+# ssr()
 #
 # 2. PatternClass (legacy package moved here)
 # The order of function calls should be: singlemap() > singleplotter()

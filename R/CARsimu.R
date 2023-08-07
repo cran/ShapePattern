@@ -1,5 +1,4 @@
-CARsimu <-
-function(LEVEL=6, rho=0.2499, row2=0, col2=0, rc1=0, cr1=0, maindi=1, rajz=TRUE) {
+CARsimu <- function(LEVEL=6, rho=0.2499, row2=0, col2=0, rc1=0, cr1=0, maindi=1, rajz=TRUE) {
 
   #--------------------------------------------------------------
   # 
@@ -18,7 +17,7 @@ function(LEVEL=6, rho=0.2499, row2=0, col2=0, rc1=0, cr1=0, maindi=1, rajz=TRUE)
   #--------------------------------------------------------------
 
   # SAVE GRAPHIC PARAMETERS AND RESTATE THEM ON EXIT
-  opar <- par(no.readonly =TRUE)
+  opar <- par(no.readonly=TRUE)
   on.exit(par(opar))
 
   col1 <- rho
