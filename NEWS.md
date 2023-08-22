@@ -1,3 +1,9 @@
+# ShapePattern 3.0.1
+* Improvements
+    * Minor error trapping in ssr() that now provides meaningful feedback.
+* Bugfixes
+    * Corresponding minor updates to manual pages and code.
+
 # ShapePattern 3.0.0
 * Improvements
     * Adaptations for retired rgeos and rgdal packages.
