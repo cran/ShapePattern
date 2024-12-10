@@ -40,7 +40,7 @@ Tarmo K. Remmel
 }
 
 \note{
-The shapefile must already be imported and have only one unique shape (although it may be multi-part and contain holes). The projection must be rectangular with units in meters (not decimal degrees or other angular unit)
+The shapefile must already be imported and have only one unique shape (although it may be multi-part and contain holes). The projection must be rectangular with units in meters (not decimal degrees or other angular unit). Code adjustments were provided by Robert J. Hijmans to allow smooth operation with the package 'terra' modifications.
 }
 
 \seealso{

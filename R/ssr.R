@@ -4,7 +4,7 @@ ssr <- function(DIST=25, shp=NULL, colours=c("LightGreen","Tan"), PLOT=TRUE) {
   #
   #  NAME:       ssr()
   #  AUTHOR:     Tarmo K. Remmel
-  #  DATE:       22 August 2023
+  #  DATE:       09 December 2024
   #  NOTES:      Perform ShrinkShape fully in R with terra
   #  NEEDS:      A shapefile (polygons), properly built
   #              library: terra
@@ -17,7 +17,7 @@ ssr <- function(DIST=25, shp=NULL, colours=c("LightGreen","Tan"), PLOT=TRUE) {
   #              No dependance on rgeos and rgdal.
   #  
   #              Call ShrinkShape
-  #              shpfileobj <- terra::vect(data@p4no)
+  #              shpfileobj <- terra::vect(data$p4no)
   #              out <- ssr(DIST=25, shp=shpfileobj)
   #
   # SHAPEFILE MUST NOT BE 'DIRTY'. BE SURE TO SAVE PROPERLY CLEANED AND COMPLETE 
@@ -42,7 +42,8 @@ ssr <- function(DIST=25, shp=NULL, colours=c("LightGreen","Tan"), PLOT=TRUE) {
     
       terra::plot(shp, ext=terra::ext(shp), col=fill[1], add=FALSE, axes=TRUE)
       for (a in 1:noiter) {
-        if(any(is.na(terra::geom(terra::buffer(shp, (-1 * a * DIST) )))) == FALSE) {
+        b <- terra::buffer(shp, (-1 * a * DIST))
+        if ((nrow(b) > 0) && (!is.na(terra::xmin(b)))) {
           terra::plot(terra::buffer(shp, (-1*a*DIST)), col=fill[a+1], ext=terra::ext(shp), add=TRUE, axes=FALSE)
         } # END IF
         par(new=TRUE)
@@ -62,9 +63,9 @@ ssr <- function(DIST=25, shp=NULL, colours=c("LightGreen","Tan"), PLOT=TRUE) {
   
      # PERFORM SHRINKING AND ACCUMULATE AREA, PERIMETER, AND PARTS FOR SHRUNKEN SHAPE
      for (a in 2:noiter) {
-       # PROCESS BUFFERING ONLY IF IT DOES NOT CAUSE THE SHAPE TO DISAPPEAR
-       if(any(is.na(terra::geom(terra::buffer(shp, (-1 * a * DIST) )))) == FALSE) {
-         temp <- terra::buffer(shp, (-1*a*DIST) )
+       temp <- terra::buffer(shp, (-1 * a * DIST))
+       if ((nrow(temp) > 0) && (!is.na(terra::xmin(temp)))) {
+         # PROCESS BUFFERING ONLY IF IT DOES NOT CAUSE THE SHAPE TO DISAPPEAR
          area[a] <- terra::expanse(temp)
          perim[a] <- terra::perim(temp)
          parts[a] <- max(terra::geom(temp)[,2])

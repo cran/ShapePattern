@@ -1,3 +1,10 @@
+
+# ShapePattern 3.1.0
+* Improvements
+    * Minor code updates in ssr() to accommodate changes to package: terra (thank you Robert Hijmans for the help).
+* Bugfixes
+    * Corresponding minor updates to manual pages and code.
+    
 # ShapePattern 3.0.1
 * Improvements
     * Minor error trapping in ssr() that now provides meaningful feedback.

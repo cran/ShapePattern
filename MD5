@@ -1,6 +1,6 @@
-e59ab2f1729581f33eebf0d7cbd0709b *DESCRIPTION
+f0893e3fa6897160bc5cd2bd4dc0284c *DESCRIPTION
 55518b5ce13b0e06386d05e81886e150 *NAMESPACE
-72fcfcb0ef11849d20514847b4cf41bc *NEWS.md
+747d46bdcbb47cee1e505af601df82f0 *NEWS.md
 5cc4e999f994c647bc4dbc40e9497553 *R/CARsimu.R
 4e0e5bb544d5b7b656849c53df134a11 *R/KLPQ.R
 219329f0132bcbd89f7571899f8a2cc2 *R/build.lut.R
@@ -13,11 +13,11 @@ d5179284710ea2adaf5dcbc5545684f5 *R/findcol.R
 75d278af23911b2aba1d1b3de10c187f *R/porosity.R
 71fe1cf22af0ef7044dbc1d7cc617835 *R/singlemap.R
 5781ed6d88b937490c142b6518d48ed9 *R/singleplotter.R
-541b42ccd73e84572ac9bacb8de83b1b *R/ssr.R
+8995616bbe0d58d83b6ea3aaec5d792f *R/ssr.R
 d5093ddf519d6f1a28ba6905a5bb0f83 *R/surfplot.R
 b89f905a3e72e05dbbc7ae85d606e9f8 *R/wi.R
 326dc878cd591a2dbce7c7d4508ea854 *R/wtest.run.R
-1f6fb31aa477f5a6c04e92a69459b28f *build/partial.rdb
+21b200005c0738dd1fafd6abb631cd94 *build/partial.rdb
 130db9cd13bf5ee0eb2ee6a7d5f96c3b *data/data.rda
 f00233fa5adc8df47c69ca5dde175053 *man/CARsimu.Rd
 16edc3e4d30e1e49a2ba7a5285816aee *man/KLPQ.Rd
@@ -33,7 +33,7 @@ dd1ac79d0779ce45290c9fb12269603a *man/findcol.Rd
 a2de883b78f0681273f911224469b2f7 *man/porosity.Rd
 3c0dfffd206c00118a960b738fc62027 *man/singlemap.Rd
 0cb0cfafa5f9cde4a38c23221120a9c9 *man/singleplotter.Rd
-a7ef3f4ad24066bc1d5c37f5ab30062e *man/ssr.Rd
+a0ae168f50402edb0cd3fb76e8b17556 *man/ssr.Rd
 c57a20f91befacbd872f22bec81f27a7 *man/surfplot.Rd
 a2c80a62c2112d1f0a5412f6079652ea *man/wi.Rd
 0cf58c05131a0e19f3d47b3b78ea63c2 *man/wtest.run.Rd
